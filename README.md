@@ -26,9 +26,9 @@ Users should be able to:
 
 ### Screenshot
 
-![Desktop view](./starter-code/screenshots/Desktop-view.png)
-![Tablet view](./starter-code/screenshots/Tablet-view.png)
-![Mobile view](./starter-code/screenshots/Mobile-view.png)
+![Desktop view](./screenshots/Desktop-view.png)
+![Tablet view](./screenshots/Tablet-view.png)
+![Mobile view](./screenshots/Mobile-view.png)
 
 ### Links
 
@@ -54,5 +54,4 @@ Is the nav choice semantically appropriate ? At first i went for section but sec
 
 ## Author
 
-- Frontend Mentor - [@yourusername](https://www.frontendmentor.io/profile/yourusername)
-
+- Frontend Mentor - [@dralveol](https://www.frontendmentor.io/profile/dralveol)
