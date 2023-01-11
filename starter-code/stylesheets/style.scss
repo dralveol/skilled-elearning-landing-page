@@ -1,0 +1,197 @@
+@import "colors";
+@import "reset";
+html {
+	font-family: 'Plus Jakarta Sans', sans-serif;
+	font-size: 16px;
+	line-height: 28px;
+}
+body {
+	background: $White;	
+}
+@mixin textStyling($size: 1rem, $weight, $line-height: 1.75rem, $color){
+	font-size: $size;
+	font-weight: $weight;
+	line-height: $line-height;
+	color: $color;
+}
+
+body {
+	header {
+		margin: 1rem;
+		display: flex;
+		justify-content: space-between;
+		button {
+			width: 8.75rem;
+			border-radius: 28px;
+			background-color: $Dark-blue;
+			@include textStyling($weight:700, $color: $White);
+			margin-left: auto;
+			padding: 0.6rem 1.5rem;
+			white-space: nowrap;
+			outline: none;
+			border: none;
+		}
+		img{
+			width: 5.5625rem;
+			margin: .8rem 0;
+		}
+	}
+	main {
+		padding: 0 1rem;
+		section {
+			article {
+				h1 {
+					@include textStyling($size: 2.5rem, $weight:800, $line-height:51px, $color: $Dark-blue);
+				}
+				p {
+					margin: 1.6rem 0;
+					@include textStyling($size: 1rem, $weight:500, $line-height:26px, $color:$Gray);
+				}
+				button {
+					padding: 1rem 2.3rem;
+					background: $Orange-Pink-Gradient;
+					@include textStyling($size: 1rem, $weight:700, $line-height:26px, $color:$White);
+					border-radius: 31px;
+					border: none;
+				}	
+			}
+			picture {
+				margin: 2.875rem 0;
+				img {
+					margin-left: auto;
+					margin-right: auto;
+				}
+			}
+		}
+		#nav-call-to-action {
+			padding: 1.9rem 1.875rem;
+			background: $Orange-Pink-Gradient;
+			@include textStyling($size: 1.5rem, $weight:800 , $line-height: 32px, $color: $White);
+			border-radius: 10px;
+		}
+		.card {
+			margin: 2rem 0;
+			padding: 1.75rem;
+			position: relative;
+			box-shadow: 0 20px 30px hsla(233, 92%, 29%, 0.3); 
+			border-radius: 10px;
+			img {
+				position: absolute;
+				top: -1.5rem;
+				left: .5rem;
+			}
+			h2 {
+				margin-top: 1.5rem;
+				margin-bottom: 1rem;
+				@include textStyling($size: 1.25rem, $weight:800, $line-height: 26px, $color: $Dark-blue);
+			}
+			p {
+				margin-bottom: 1.5rem;
+				@include textStyling($size: 1rem, $weight:500, $line-height: 26px, $color: $Gray);
+			}
+			a {
+				margin-bottom: .8rem;
+				@include textStyling($size: 1.125rem, $weight:700, $line-height: 28px, $color: $Dark-pink);
+				text-decoration: none;
+			}
+		}
+	}
+	footer {
+		margin-top: 4.187rem;
+		background-color: $Dark-blue;
+		display: flex;
+		justify-content: space-between;
+		padding: 2.25rem 1rem;
+		button {
+			border-radius: 28px;
+			outline: none;
+			border: none;
+			background: $Blue-Pink-Gradient;
+			padding: .5rem 1.6rem;
+			@include textStyling($size: 1rem, $weight: 700, $line-height: 28px, $color: $White)
+		}
+		img {
+			margin: .8rem 0;
+		}
+	}
+}
+button {
+	cursor: pointer;
+}
+
+@media screen and (min-width: 700px) {
+	body {
+		position: relative;
+		overflow-x: hidden;
+		header {
+			margin: 2rem;
+		}
+		main {
+			padding: 0 2rem;
+			section {
+				display: flex;
+				margin-bottom: 15rem;
+				article {
+					width: 55%;
+				}
+				picture {
+					position: absolute;
+					width: 35rem;
+					right: -15rem;
+					top: -7rem;
+					z-index: -1;
+				}
+			}
+			nav {
+				display: flex;
+				flex-wrap: wrap;
+				.card {
+					width: 48%;
+					margin: 1rem 1%;
+				}
+			}
+		}
+	}
+}
+
+@media screen and (min-width: 1000px) {
+	body {
+		header {
+			margin: 2rem 10rem;
+			button:active{
+				background-color: $Grayish-blue;
+			}
+		}
+		main {
+			margin: 0 8rem;
+			section {
+				article {
+					button:active {
+						opacity: 50%;
+					}
+				}
+				picture {
+					width: 48rem;
+					right: -18rem;
+					top: -12rem;
+				}
+			}
+			nav {
+				.card {
+					width: 30%;
+				}
+			}
+		}
+		footer {
+			img {
+				margin: .8rem 10rem;
+			}
+			button {
+				margin: 0 10rem;
+			}
+			button:active {
+				opacity: 70%;
+			}
+		}
+	}
+}
